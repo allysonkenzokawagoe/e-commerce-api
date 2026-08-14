@@ -1,5 +1,6 @@
 package com.br.ecommerce.modules.user.service;
 
+import com.br.ecommerce.config.exceptions.ValidacaoException;
 import com.br.ecommerce.modules.user.dto.UserRequest;
 import com.br.ecommerce.modules.user.model.User;
 import com.br.ecommerce.modules.user.repository.UserRepository;
@@ -23,7 +24,7 @@ public class UserService {
     @SneakyThrows
     private void validarUser(UserRequest request) {
         if (repository.existsByEmail(request.email())) {
-            throw new Exception("It already exists a user with this e-mail!");
+            throw new ValidacaoException("It already exists a user with this e-mail!");
         }
     }
 }
