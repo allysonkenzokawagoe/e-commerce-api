@@ -1,4 +1,4 @@
-package com.br.ecommerce.config.exceptions;
+package com.br.ecommerce.modules.comum.exceptions;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
